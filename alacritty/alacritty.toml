@@ -21,6 +21,9 @@ opacity = 0.8
 decorations_theme_variant = "Dark"
 decorations = "None"
 
+[cursor]
+style = "Beam"
+
 [[keyboard.bindings]]
 chars = "\u001B[13;2u"
 key = "Return"
