@@ -11,7 +11,7 @@ export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Source cargo env file
-source $CARGO_HOME/env
+[ -f "$CARGO_HOME/env" ] && source $CARGO_HOME/env
 
 # Pass GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
