@@ -1,0 +1,9 @@
+# Ignore everything in gnupg/.
+/*
+
+# Include this .gitignore
+!/.gitignore
+
+# Tracked files
+!/gpg.conf
+!/gpg-agent.conf
