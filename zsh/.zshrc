@@ -41,14 +41,22 @@ FZF_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/fzf"
 # Zsh custom directory
 ZSH_CUSTOM="${XDG_CONFIG_HOME:-$HOME/.config}/omz"
 
+# Enable prompt substitution
+setopt prompt_subst
+
+# Shrink path plugin settings
+zstyle :prompt:shrink_path last yes
+zstyle :prompt:shrink_path tilde yes
+
 # Enable autoloading NVM
-zstyle ":omz:plugins:nvm" lazy yes
+zstyle :omz:plugins:nvm lazy yes
 
 # Plugins list
 plugins=(
   gpg-agent
+  shrink-path
   zsh-syntax-highlighting
-  fzf-zsh-plugin
+  fzf
   nvm
   rust
 )
