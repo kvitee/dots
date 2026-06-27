@@ -23,7 +23,7 @@ export ZSH="${XDG_DATA_HOME:-$HOME/.local/share}/omz"
 HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
 
 # Oh-My-Zsh theme
-ZSH_THEME="fino"
+ZSH_THEME="tiny"
 
 # Set Oh-My-Zsh cache directory and ensure it exists
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/omz"
