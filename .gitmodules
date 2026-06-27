@@ -1,15 +1,15 @@
 [submodule "nvim"]
-	path = nvim
+	path = dot-config/nvim
 	url = https://github.com/kvitee/nvim-config
 [submodule "alacritty/themes"]
-	path = alacritty/themes
+	path = dot-config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
 	shallow = true
 [submodule "omz/plugins/fzf-zsh-plugin"]
-	path = omz/plugins/fzf-zsh-plugin
+	path = dot-config/omz/plugins/fzf-zsh-plugin
 	url = https://github.com/unixorn/fzf-zsh-plugin.git
 	shallow = true
 [submodule "omz/plugins/zsh-syntax-highlighting"]
-	path = omz/plugins/zsh-syntax-highlighting
+	path = dot-config/omz/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 	shallow = true
