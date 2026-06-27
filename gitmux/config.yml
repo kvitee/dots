@@ -8,7 +8,10 @@ tmux:
     untracked: " "
     clean: " "
 
-  layout: [ branch, remote, " | ", flags ]
+  styles:
+    clear: "#[default,underscore]"
+
+  layout: [ branch, remote, "#[default] | ", flags ]
 
   options:
     divergence_space: true
