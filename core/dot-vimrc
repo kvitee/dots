@@ -53,29 +53,26 @@ call plug#begin('~/.vim/plugged')
 " Utils
 Plug 'rstacruz/sparkup'
 Plug 'tpope/vim-surround'
-Plug 'justinmk/vim-sneak'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
-Plug 'kaicataldo/material.vim'
 Plug 'ayu-theme/ayu-vim'
-
-" Language specific
-Plug 'pangloss/vim-javascript'
 
 " End Vim-Plug section
 call plug#end()
 
-"--- Colorschemes and highlighting ---"
+"--- Colorscheme, highlighting, cursor ---"
 
 " Colorscheme
-colo gruvbox
+colo ayu
 
 " Transparent background
 hi Normal guibg=NONE ctermbg=NONE
 
-" Javascript docs highlighting
-let g:javascript_plugin_jsdoc = 1
+" Change cursor shape for different modes
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[2 q"
 
 "--- Netrw file explorer settings ---"
 
@@ -93,7 +90,3 @@ let g:netrw_browse_split = 3
 " Go to next or previous tab by L or H respectively
 nn H gT
 nn L gt
-
-" Replace default f and F by Vim-Sneak commands
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
