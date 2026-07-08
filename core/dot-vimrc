@@ -45,10 +45,16 @@ se bg=dark
 " For corrent work in tmux
 se term=xterm-256color
 
+" viminfo file location
+se vif=~/.local/share/vim/viminfo
+
 "--- Plugins ---"
 
+" Add custom directory to runtime path
+se rtp+=~/.config/vim
+
 " Begin Vim-Plug section
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/vim/plugged')
 
 " Utils
 Plug 'rstacruz/sparkup'
