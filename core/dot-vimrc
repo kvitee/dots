@@ -36,6 +36,12 @@ se sw=2
 se wrap
 se lbr
 
+" Highlight search results
+se hls
+
+" Show number of search matches
+se shm-=S
+
 " Use 24-bit colors
 se tgc
 
@@ -96,3 +102,6 @@ let g:netrw_browse_split = 3
 " Go to next or previous tab by L or H respectively
 nn H gT
 nn L gt
+
+" Disable search highlighting
+nn <space>h :noh<cr>
