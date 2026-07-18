@@ -88,6 +88,9 @@ let &t_EI = "\e[2 q"
 
 "--- Netrw file explorer settings ---"
 
+" Change history file location
+let g:netrw_home = '~/.local/share/vim'
+
 " Hide banner
 let g:netrw_banner = 0
 
