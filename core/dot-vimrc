@@ -1,5 +1,8 @@
 "--- Settings ---"
 
+" Disable Vi-compatibility
+se nocp
+
 " Disable mouse
 se mouse=
 
