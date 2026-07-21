@@ -9,9 +9,9 @@ tmux:
     clean: " "
 
   styles:
-    clear: "#[default,underscore]"
+    clear: "#[default]"
 
-  layout: [ branch, remote, "#[default] | ", flags ]
+  layout: [ "#[underscore]", branch, remote, " | ", flags ]
 
   options:
     divergence_space: true
