@@ -1,5 +1,20 @@
 # ---------- PATH ----------
 # User local binaries
 if ! [[ "$PATH" =~ "$HOME/.local/bin:" ]]; then
-    export PATH="$HOME/.local/bin:$PATH"
+  path+=($HOME/.local/bin:$PATH)
+fi
+
+# Rust toolchain and built binaries
+if [ -d "$CARGO_HOME" ]; then
+  path+=($CARGO_HOME/bin)
+fi
+
+# Golang built binaries
+if [ -d "$GOPATH" ]; then
+  path+=($GOPATH/bin)
+fi
+
+# Golang toolchain binaries (go, gofmt)
+if [ -d "$GOROOT" ]; then
+  path+=($GOROOT/bin)
 fi

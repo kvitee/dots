@@ -1,18 +1,3 @@
-# GnuPG home directory
-export GNUPGHOME="${XDG_CONFIG_HOME:-$HOME/.config}/gnupg"
-
-# Node Version Manager (NVM) directory
-export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
-
-# RustUp home directory
-export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
-
-# Cargo home directory
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
-
-# Source cargo env file
-[ -f "$CARGO_HOME/env" ] && source $CARGO_HOME/env
-
 # Pass GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 

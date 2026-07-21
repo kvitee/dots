@@ -12,5 +12,22 @@ export VISUAL=$(command -v nvim)
 # Vim for both if Neovim is not installed
 : ${VISUAL:=$EDITOR}
 
-# ---------- GPG ----------
+# ---------- GnuPG ----------
+# Correct GnuPG tty
 export GPG_TTY=$(tty)
+
+# GnuPG home directory
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+
+# ---------- Language specific directories ----------
+# RustUp directory
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# Cargo directory
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
+# Golang cache and built binaries
+export GOPATH="$XDG_DATA_HOME/golang"
+
+# Golang installation
+export GOROOT="$GOPATH/sdk"
