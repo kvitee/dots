@@ -23,3 +23,6 @@ export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 # ---------- Modules ----------
 # Completions
 source "$ZDOTDIR/completions.zsh"
+
+# Prompt
+source "$ZDOTDIR/prompt.zsh"
