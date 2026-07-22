@@ -1,11 +1,23 @@
+# ---------- History ----------
+# History file
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+
+# Share history across all shells
+setopt share_history
+
+# Remove trailing spaces
+setopt hist_ignore_space
+
+# Prevent duplicates
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+
 # Pass GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 
 # Path to Oh-My-Zsh installation
 export ZSH="${XDG_DATA_HOME:-$HOME/.local/share}/omz"
-
-# History file
-HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
 
 # Oh-My-Zsh theme
 ZSH_THEME="tiny"
