@@ -13,7 +13,11 @@ setopt hist_ignore_dups
 setopt hist_expire_dups_first
 setopt hist_find_no_dups
 
-# Pass GPG options
+# ---------- Pass password manager ----------
+# Vault directory
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+
+# GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 
 # Path to Oh-My-Zsh installation
