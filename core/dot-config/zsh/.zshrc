@@ -2,6 +2,10 @@
 # History file
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 
+# History size
+HISTSIZE=50000
+SAVEHIST=$HISTSIZE
+
 # Share history across all shells
 setopt share_history
 
