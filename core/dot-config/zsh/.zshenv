@@ -13,11 +13,14 @@ export VISUAL=$(command -v nvim)
 : ${VISUAL:=$EDITOR}
 
 # ---------- GnuPG ----------
-# Correct GnuPG tty
+# Home directory
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+
+# TTY
 export GPG_TTY=$(tty)
 
-# GnuPG home directory
-export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+# Enable ssh authentication
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # ---------- Language specific directories ----------
 # RustUp directory
