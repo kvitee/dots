@@ -9,7 +9,8 @@ SAVEHIST=$HISTSIZE
 # Share history across all shells
 setopt share_history
 
-# Remove trailing spaces
+# Remove continious spaces within commands and trailing whitespaces
+setopt hist_reduce_blanks
 setopt hist_ignore_space
 
 # Prevent duplicates
