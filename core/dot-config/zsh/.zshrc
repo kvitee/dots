@@ -35,3 +35,6 @@ source "$ZDOTDIR/completions.zsh"
 
 # Prompt
 source "$ZDOTDIR/prompt.zsh"
+
+# Plugins
+source "$ZDOTDIR/plugins.zsh"
