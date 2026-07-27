@@ -10,6 +10,6 @@
 	url = https://github.com/unixorn/fzf-zsh-plugin.git
 	shallow = true
 [submodule "omz/plugins/zsh-syntax-highlighting"]
-	path = core/dot-config/omz/plugins/zsh-syntax-highlighting
+	path = core/dot-config/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 	shallow = true
