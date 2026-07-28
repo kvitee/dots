@@ -13,13 +13,13 @@ insecure_dirs=(${(f@):-"$(compaudit)"})
 
 # If audit was successful load completions
 if [[ $? -eq 0 ]]; then
-  # Load from cache if compdump file exists and generated in the last 24 hours,
-  # else (re)generate it.
-  if [[ -e "$compdump_file" && -n "$compdump_file"(#qN.mh-24) ]]; then
-    compinit -C -d "$compdump_file"
-  else
-    compinit -d "$compdump_file"
+  # Remove compdump file if it is older than 24 hours
+  if [[ -n "$compdump_file"(#qN.mh+24) ]]; then
+    rm "$compdump_file"
   fi
+
+  # Load completions from compdump file or generate new
+  compinit -C -d "$compdump_file"
 else
   if [[ $#insecure_dirs -ne 0 ]]; then
     echo "[compaudit] Insecure directories was found:"
