@@ -33,6 +33,9 @@ gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
 # Completions
 source "$ZDOTDIR/completions.zsh"
 
+# Fzf
+source "$ZDOTDIR/fzf.zsh"
+
 # Prompt
 source "$ZDOTDIR/prompt.zsh"
 
