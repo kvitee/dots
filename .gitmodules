@@ -5,11 +5,11 @@
 	path = alacritty/dot-config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
 	shallow = true
-[submodule "omz/plugins/fzf-zsh-plugin"]
-	path = core/dot-config/omz/plugins/fzf-zsh-plugin
-	url = https://github.com/unixorn/fzf-zsh-plugin.git
-	shallow = true
-[submodule "omz/plugins/zsh-syntax-highlighting"]
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = core/dot-config/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	shallow = true
+[submodule "zsh/plugins/zsh-vi-mode"]
+	path = core/dot-config/zsh/plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode
 	shallow = true
