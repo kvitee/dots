@@ -25,16 +25,15 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 # GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 
-# ---------- GnuPG agent ----------
-# Fix gpg agent passphrase prompt
-gpg-connect-agent updatestartuptty /bye > /dev/null 2>&1
-
 # ---------- Modules ----------
 # Completions
 source "$ZDOTDIR/completions.zsh"
 
 # Fzf
 source "$ZDOTDIR/fzf.zsh"
+
+# Hooks
+source "$ZDOTDIR/hooks.zsh"
 
 # Prompt
 source "$ZDOTDIR/prompt.zsh"
