@@ -40,3 +40,6 @@ source "$ZDOTDIR/prompt.zsh"
 
 # Plugins
 source "$ZDOTDIR/plugins.zsh"
+
+# Syntax highlighting styles
+source "$ZDOTDIR/highlight.zsh"
