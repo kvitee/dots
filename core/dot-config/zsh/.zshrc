@@ -26,6 +26,9 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 
 # ---------- Modules ----------
+# Aliases
+source "$ZDOTDIR/aliases.zsh"
+
 # Completions
 source "$ZDOTDIR/completions.zsh"
 
