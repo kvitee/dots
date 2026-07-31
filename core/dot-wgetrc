@@ -1,0 +1,2 @@
+# HSTS file location
+hsts-file = ~/.cache/wget-hsts
