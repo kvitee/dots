@@ -1,65 +1,48 @@
-# GnuPG home directory
-export GNUPGHOME="${XDG_CONFIG_HOME:-$HOME/.config}/gnupg"
+# ---------- History ----------
+# History file
+HISTFILE="$XDG_STATE_HOME/zsh/history"
 
-# Node Version Manager (NVM) directory
-export NVM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nvm"
+# History size
+HISTSIZE=50000
+SAVEHIST=$HISTSIZE
 
-# RustUp home directory
-export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
+# Share history across all shells
+setopt share_history
 
-# Cargo home directory
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+# Remove continious spaces within commands and trailing whitespaces
+setopt hist_reduce_blanks
+setopt hist_ignore_space
 
-# Source cargo env file
-[ -f "$CARGO_HOME/env" ] && source $CARGO_HOME/env
+# Prevent duplicates
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
 
-# Pass GPG options
+# ---------- Pass password manager ----------
+# Vault directory
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+
+# GPG options
 export PASSWORD_STORE_GPG_OPTS="--armor --no-throw-keyids"
 
-# Path to Oh-My-Zsh installation
-export ZSH="${XDG_DATA_HOME:-$HOME/.local/share}/omz"
+# ---------- Modules ----------
+# Aliases
+source "$ZDOTDIR/aliases.zsh"
 
-# History file
-HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
+# Completions
+source "$ZDOTDIR/completions.zsh"
 
-# Oh-My-Zsh theme
-ZSH_THEME="tiny"
+# Fzf
+source "$ZDOTDIR/fzf.zsh"
 
-# Set Oh-My-Zsh cache directory and ensure it exists
-ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/omz"
-mkdir -p $ZSH_CACHE_DIR
+# Hooks
+source "$ZDOTDIR/hooks.zsh"
 
-# Complecion cache file (.zcompdump)
-ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+# Prompt
+source "$ZDOTDIR/prompt.zsh"
 
-# Disable auto-setting terminal title
-DISABLE_AUTO_TITLE="true"
+# Plugins
+source "$ZDOTDIR/plugins.zsh"
 
-# Custom path for fzf binary
-FZF_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/fzf"
-
-# Zsh custom directory
-ZSH_CUSTOM="${XDG_CONFIG_HOME:-$HOME/.config}/omz"
-
-# Enable prompt substitution
-setopt prompt_subst
-
-# Shrink path plugin settings
-zstyle :prompt:shrink_path last yes
-zstyle :prompt:shrink_path tilde yes
-
-# Enable autoloading NVM
-zstyle :omz:plugins:nvm lazy yes
-
-# Plugins list
-plugins=(
-  gpg-agent
-  shrink-path
-  zsh-syntax-highlighting
-  fzf
-  nvm
-  rust
-)
-
-# Run Oh-My-Zsh
-source $ZSH/oh-my-zsh.sh
+# Syntax highlighting styles
+source "$ZDOTDIR/highlight.zsh"
