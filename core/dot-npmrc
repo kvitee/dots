@@ -1,2 +1,2 @@
 # Npm cache directory
-cache=~/.cache/npm
+cache = ~/.cache/npm
