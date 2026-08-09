@@ -11,3 +11,17 @@
 --bind='ctrl-d:preview-down'
 --bind='ctrl-U:preview-half-page-up'
 --bind='ctrl-D:preview-half-page-down'
+
+# Colorscheme
+--color='border:#5a6378'
+--color='bg+:#1b1f29'
+--color='fg:#bfbdb6'
+--color='fg+:#bfbdb6'
+--color='hl:#e6b450'
+--color='hl+:#e6b450'
+--color='header:#95e6cb'
+--color='info:#e6c08a'
+--color='prompt:#ff8f40'
+--color='spinner:#aad94c'
+--color='pointer:#73b8ff'
+--color='marker:#d2a6ff'
