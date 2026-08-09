@@ -1,0 +1,35 @@
+# Ayu Dark colorscheme
+# Based on the Ayu colors repo:
+# https://github.com/ayu-theme/ayu-colors
+
+# Default
+[colors.primary]
+background = "#10141c"
+foreground = "#bfbdb6"
+
+# Cursor
+[colors.cursor]
+#cursor = "#c6c8d1"
+#text   = ""
+
+# Normal colors
+[colors.normal]
+black   = "#0a0000"
+red     = "#e6495a"
+green   = "#97c142"
+yellow  = "#e89d37"
+blue    = "#17acf2"
+magenta = "#c385fe"
+cyan    = "#84ceb5"
+white   = "#c7c7c7"
+
+# Bright colors
+[colors.bright]
+black   = '#686868'
+red     = '#f07178'
+green   = '#aad94c'
+yellow  = '#ffb454'
+blue    = '#59c2ff'
+magenta = '#d2a6ff'
+cyan    = '#95e6cb'
+white   = '#f6ffff'
