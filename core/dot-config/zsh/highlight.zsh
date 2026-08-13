@@ -1,79 +1,106 @@
+# Set type of styles array to associative array (key/value)
+typeset -A ZSH_HIGHLIGHT_STYLES
+
 # Activate brackets highlighter
 ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
 
 # Helper function to set highlight style
-function highlight {
+function hl {
   ZSH_HIGHLIGHT_STYLES[$1]=$2
 }
 
-# General
-highlight default fg=white
-highlight unknown-token fg=red,underline
-highlight reserved-word fg=magenta,bold
-highlight comment fg=black,bold,underline
+## General
+# builtin, noglob
+hl "precommand"    "fg=#59c2ff"
+# ls, cat
+hl "command"       "fg=#aad94c"
+# cd, echo, logout
+hl "builtin"       "fg=#e6c08a,bold"
+# hl
+hl "function"      "fg=#ffb454"
+# if, for
+hl "reserved-word" "fg=#ff8f40,bold"
+# #Comment
+hl "comment"       "fg=#5a6673"
+# Anything else
+hl "arg0"          "fg=#e6c08a,bold,underline"
+# Unknown
+hl "unknown-token" "fg=#d95757,bold,underline"
 
-# Commands
-highlight precommand fg=magenta
-highlight command fg=green,bold
-highlight builtin fg=green,bold
-highlight function fg=yellow,bold
-highlight arg0 fg=green,underline
+## Aliases
+hl "alias"        "fg=#aad94c"
+hl "suffix-alias" "fg=#39bae6,underline"
+hl "global-alias" "fg=#95e6cb,bold"
 
-# Aliases
-highlight alias fg=green,bold
-highlight suffix-alias fg=green,underline
-highlight global-alias fg=cyan,underline
+## Operators
+# ;, |
+hl "commandseparator" "fg=#f29668"
+# >, <
+hl "redirection"      "fg=#f29668"
+# VAR=value
+hl "assign"           "fg=#f29668"
 
-# Separators, redirections, pipes..
-highlight commandseparator fg=magenta
-highlight redirection fg=magenta
-highlight assign fg=magenta
+## Options/flags
+# -o
+hl "single-hyphen-option" "fg=#73b8ff"
+# --option
+hl "double-hyphen-option" "fg=#73b8ff"
 
-# Options
-highlight single-hyphen-option fg=cyan
-highlight double-hyphen-option fg=cyan
+## Arguments
+# 'arg'
+hl "single-quoted-argument"          "fg=#f6b18f"
+hl "single-quoted-argument-unclosed" "fg=#f6b18f,underline"
+# "arg"
+hl "double-quoted-argument"          "fg=#ffad7a"
+hl "double-quoted-argument-unclosed" "fg=#ffad7a,underline"
+# $'arg'
+hl "dollar-quoted-argument"          "fg=#dab8ff"
+hl "dollar-quoted-argument-unclosed" "fg=#dab8ff,underline"
+# "$VAR"
+hl "dollar-double-quoted-argument"   "fg=#d2a6ff"
+# "\n" and $'\n'
+hl "back-double-quoted-argument"     "fg=#c589fe"
+hl "back-dollar-quoted-argument"     "fg=#c589fe"
 
-# Arguments
-highlight single-quoted-argument fg=yellow
-highlight single-quoted-argument-unclosed fg=yellow,underline
-highlight double-quoted-argument fg=yellow
-highlight double-quoted-argument-unclosed fg=yellow,underline
-highlight dollar-quoted-argument fg=yellow
-highlight dollar-quoted-argument-unclosed fg=yellow,underline
-highlight dollar-double-quoted-argument fg=blue
-highlight back-double-quoted-argument fg=cyan
-highlight back-dollar-quoted-argument fg=cyan
+## Substitutions
+# $(command)
+hl "command-substitution"           "none"
+hl "command-substitution-delimiter" "fg=#ff8f40"
+# <(command)
+hl "process-substitution"           "none"
+hl "process-substitution-delimiter" "fg=#f67e1a"
+# `command`
+hl "back-quoted-argument"           "fg=#e5730e"
+hl "back-quoted-argument-unclosed"  "fg=#e5730e,underline"
+hl "back-quoted-argument-delimiter" "none"
+# $((2+3))
+hl "arithmetic-expansion"           "fg=#8ad5bc"
 
-# Substitutions
-highlight process-substitution none
-highlight process-substitution-delimiter fg=magenta
-highlight command-substitution none
-highlight command-substitution-delimiter fg=cyan
-highlight arithmetic-expansion fg=magenta
+## File descriptors
+hl "named-fd"   "fg=#74b59f"
+hl "numeric-fd" "fg=#74b59f"
 
-# File descriptors
-highlight named-fd fg=cyan
-highlight numeric-fd fg=cyan
+## Paths
+# Path nodes
+hl "path"                      "fg=#e6c08a,underline"
+hl "path_prefix"               "fg=#e6c08a"
+# Path separator (/)
+hl "path_pathseparator"        "fg=#d5b07c,underline"
+hl "path_pathseparator_prefix" "fg=#d5b07c"
+# Glob star (*)
+hl "globbing"                  "fg=#95e6cb,underline"
 
-# Paths
-highlight path fg=white,underline
-highlight path_prefix fg=white
-highlight globbing fg=cyan,underline
-highlight autodirectory fg=cyan,bold,underline
-
-# Brackets
-highlight bracket-error fg=red,bold,underline
-highlight bracket-level-1 fg=blue
-highlight bracket-level-2 fg=cyan
-highlight bracket-level-3 fg=green
-highlight bracket-level-4 fg=yellow
-highlight bracket-level-5 fg=magenta
-highlight cursor-matchingbracket bold,underline
-
-# Not styled
-highlight back-quoted-argument none
-highlight back-quoted-argument-unclosed none
-highlight back-quoted-argument-delimiter none
+## Brackets
+# Unclosed brackets
+hl "bracket-error"          "fg=#d95757,bold,underline"
+# Pair of bracket under cursor
+hl "cursor-matchingbracket" "bold,underline"
+# Nest level
+hl "bracket-level-1"        "fg=#d5b07c"
+hl "bracket-level-2"        "fg=#f0a33a"
+hl "bracket-level-3"        "fg=#9cc845"
+hl "bracket-level-4"        "fg=#7fc5ae"
+hl "bracket-level-5"        "fg=#4cc9f5"
 
 # Remove helper function
-unfunction highlight
+unfunction hl

@@ -1,2 +1,2 @@
 # Prompt format
-PROMPT="%F{blue}%c%B%(?.. %F{red}(%?%)) %F{magenta}󰄾%b%f "
+PROMPT="%F{#73b8ff}%c%B%(?.. %F{#d95757}(%?%)) %F{#e6b450}>%b%f "
