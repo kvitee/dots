@@ -65,12 +65,14 @@ se rtp+=~/.config/vim
 " Begin Vim-Plug section
 call plug#begin('~/.local/share/vim/plugged')
 
-" Utils
-Plug 'rstacruz/sparkup'
+" Add, change, remove surrounds (brackets, quotes, etc)
 Plug 'tpope/vim-surround'
 
-" Colorschemes
-Plug 'morhetz/gruvbox'
+" Fzf integration
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Ayu colorscheme
 Plug 'ayu-theme/ayu-vim'
 
 " End Vim-Plug section
