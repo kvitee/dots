@@ -107,15 +107,11 @@ let g:netrw_browse_split = 3
 
 "--- Key mappings ---"
 
-" Go to next or previous tab by L or H respectively
-nn <silent> H gT
-nn <silent> L gt
-
 " Buffers navigation
-nn <silent> bb :bu #<cr>
-nn <silent> bn :bn<cr>
-nn <silent> bp :bp<cr>
-nn <silent> bq :bd<cr>
+nn <silent> <space>bb :bu #<cr>
+nn <silent> <space>bn :bn<cr>
+nn <silent> <space>bp :bp<cr>
+nn <silent> <space>bq :bd<cr>
 
 " Disable search highlighting
 nn <silent> <space>h :noh<cr>
