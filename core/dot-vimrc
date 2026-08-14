@@ -109,5 +109,11 @@ let g:netrw_browse_split = 3
 nn <silent> H gT
 nn <silent> L gt
 
+" Buffers navigation
+nn <silent> bb :bu #<cr>
+nn <silent> bn :bn<cr>
+nn <silent> bp :bp<cr>
+nn <silent> bq :bd<cr>
+
 " Disable search highlighting
 nn <silent> <space>h :noh<cr>
