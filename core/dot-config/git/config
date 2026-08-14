@@ -1,7 +1,3 @@
-[alias]
-    graph = log --graph --oneline --decorate --all
-[core]
-    editor = nvim
 [init]
     defaultBranch = main
 [user]
@@ -12,3 +8,5 @@
     gpgsign = true
 [tag]
     forceSignAnnotated = true
+[alias]
+    graph = log --graph --oneline --decorate --all
