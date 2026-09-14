@@ -59,7 +59,8 @@ se vif=~/.local/share/vim/viminfo
 
 "--- Plugins ---"
 
-" Add custom directory to runtime path
+" Add custom directories to runtime path
+se rtp+=~/.local/share/vim
 se rtp+=~/.config/vim
 
 " Begin Vim-Plug section
