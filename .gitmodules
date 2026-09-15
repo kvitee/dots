@@ -1,11 +1,3 @@
 [submodule "nvim"]
 	path = core/dot-config/nvim
 	url = https://github.com/kvitee/nvim-config
-[submodule "zsh/plugins/zsh-syntax-highlighting"]
-	path = core/dot-config/zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-	shallow = true
-[submodule "zsh/plugins/zsh-vi-mode"]
-	path = core/dot-config/zsh/plugins/zsh-vi-mode
-	url = https://github.com/jeffreytse/zsh-vi-mode
-	shallow = true
