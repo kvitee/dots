@@ -1,6 +1,9 @@
 # Load completion system
 autoload -Uz compinit compaudit
 
+# Load completion module
+zmodload zsh/complist
+
 # Enable advanced patterns and regular expressions
 setopt extendedglob
 
@@ -32,3 +35,6 @@ zstyle ":completion:*" menu select
 
 # Case-insensitive completions
 zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
+
+# Map Shift-Tab to select previous option
+bindkey -M menuselect "^[[Z" reverse-menu-complete
