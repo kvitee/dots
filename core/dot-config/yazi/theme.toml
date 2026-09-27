@@ -1,0 +1,6 @@
+[flavor]
+dark = "ayu-dark"
+
+[mgr]
+border_symbol = "│"
+border_style = { fg = "darkgray" }

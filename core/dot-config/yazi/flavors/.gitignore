@@ -1,0 +1,5 @@
+# Ignore every installed flavor.
+/*
+
+# Include this .gitignore
+!/.gitignore

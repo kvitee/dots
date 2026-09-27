@@ -1,0 +1,14 @@
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
+
+[[mgr.prepend_keymap]]
+on   = "M"
+run  = "plugin toggle-pane max-preview"
+desc = "Magnify preview pane"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a" ]
+run  = "plugin compress"
+desc = "Zip selected files"

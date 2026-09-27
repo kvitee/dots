@@ -1,0 +1,4 @@
+# Use default image previewer for SVG files
+[[plugin.prepend_previewers]]
+mime = "image/svg+xml"
+run = "image"

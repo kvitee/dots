@@ -1,0 +1,5 @@
+# Ignore every installed plugin.
+/*
+
+# Include this .gitignore
+!/.gitignore

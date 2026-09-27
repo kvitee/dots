@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:glow"
+rev = "598cdb6"
+hash = "99aa06d3014798d86001c324468d497f"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "f703392"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "00804da"
+hash = "d2ce8358c59ea6e8552091075b3a191c"
